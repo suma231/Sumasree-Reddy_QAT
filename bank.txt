@@ -1,0 +1,44 @@
+ import java.util.*;
+public interface BankAccount
+{
+     public void checkBankBanalce();
+     public void validateUser();
+}
+public class SavingsAccount implements BankAccount
+{
+    @Override
+     public void checkBankBanalce()
+    {
+        System.out.println("Savings Acc balance");
+    }
+    @Override
+     public void validateUser()
+    {
+        System.out.println("Savings Acc user validated");
+    }
+}
+public class CurrentAccount implements BankAccount
+{
+    @Override
+    public void checkBankBanalce()
+    {
+        System.out.println("Current Acc balance");
+    }
+    @Override
+    public void validateUser()
+    {
+        System.out.println("Current Acc user validated");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		SavingsAccount S = new SavingsAccount();
+		CurrentAccount C = new CurrentAccount();
+		S.checkBankBanalce();
+		S.validateUser();
+		C.checkBankBanalce();
+		C.validateUser();
+		
+	}
+}
